@@ -15,6 +15,7 @@ class Shader
 public:
 	GLuint ID;
 	Shader(const char* vertexFile, const char* fragmentFile);
+	Shader(const char* vertexFile, std::string fragShaderData);
 
 	void setBool(const std::string& name, bool value) const
 	{

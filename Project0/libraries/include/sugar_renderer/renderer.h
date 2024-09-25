@@ -19,7 +19,14 @@ private:
 
 public:
 
+	glm::mat4 model = glm::mat4(1.0f);
+	glm::mat4 projection = glm::ortho(-5.0f, 5.0f, -5.0f, 5.0f, 0.0f, 10.0f);
+
 	void Draw(Shader& shader, glm::mat4& transformations, VAO& vao, GLsizeiptr size);
+
+	void ClearScreen();
+	void ClearScreen(glm::vec4 color);
+	void ClearScreen(float r, float g, float b, float a);
 
 };
 #endif

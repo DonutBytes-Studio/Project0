@@ -1,0 +1,18 @@
+#version 330 core
+
+out vec4 FragColor;
+
+in vec2 UV;
+
+uniform sampler2D tex0;
+
+uniform sampler2D normals;
+uniform vec3 crntPos;
+uniform float ambient;
+
+struct PointLight {    
+    vec3 position;
+    vec4 color;
+};
+
+#define NR_POINT_LIGHTS 

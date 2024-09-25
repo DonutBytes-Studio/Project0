@@ -24,16 +24,17 @@ public:
 
 	glm::mat4 model = glm::mat4(1.0f);
 	glm::mat4 projection = glm::mat4(1.0f);
+	glm::mat4 transformations = glm::mat4(1.0f);
 
 	Renderer* renderer;
 	VAO* vao;
 	Shader* shader;
 	GLsizeiptr indicesSize;
 
-	GameObject(Shader& shader, Renderer& renderer, glm::mat4 proj, VAO& vao, GLsizeiptr indicesSize);
+	GameObject(Shader& shader, Renderer& renderer, VAO& vao, GLsizeiptr indicesSize);
 
 	void Draw();
-	void Draw(glm::vec4 lightColor[4], glm::vec3 lightPos[4], int tex0Unit, GLenum baseEnum, Texture base, int normalsUnit, GLenum normalsEnum, Texture normals);
+	void Draw(int numberOfLights, glm::vec4 lightColor[], glm::vec3 lightPos[], int tex0Unit, GLenum baseEnum, Texture base, int normalsUnit, GLenum normalsEnum, Texture normals);
 };
 
 #endif

@@ -27,8 +27,12 @@
     <ClCompile Include="libraries\include\sugar_renderer\texture.cpp" />
     <ClCompile Include="libraries\include\sugar_renderer\VAO.cpp" />
     <ClCompile Include="libraries\include\sugar_renderer\VBO.cpp" />
-    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\engine.cpp" />
+    <ClCompile Include="src\lights_test.cpp" />
     <ClCompile Include="libraries\include\glad\glad.c" />
+    <ClCompile Include="src\logger.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\shaderConstructor.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="libraries\include\sugar_renderer\EBO.h" />
@@ -38,11 +42,15 @@
     <ClInclude Include="libraries\include\sugar_renderer\texture.h" />
     <ClInclude Include="libraries\include\sugar_renderer\VAO.h" />
     <ClInclude Include="libraries\include\sugar_renderer\VBO.h" />
+    <ClInclude Include="src\engine.h" />
+    <ClInclude Include="src\logger.h" />
+    <ClInclude Include="src\shaderConstructor.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ressources\shaders\color.frag" />
     <None Include="ressources\shaders\default.vert" />
-    <None Include="ressources\shaders\texture.frag" />
+    <None Include="ressources\shaders\litTexture.frag" />
+    <None Include="ressources\shaders\unlitTexture.frag" />
     <None Include="ressources\shaders\UV.frag" />
     <None Include="ressources\shaders\windowCoord.frag" />
   </ItemGroup>
@@ -52,6 +60,10 @@
     <Image Include="ressources\textures\Donut.png" />
     <Image Include="ressources\textures\Normals test.png" />
     <Image Include="ressources\textures\White texture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ressources\shaders\parts\litTextureShader1.txt" />
+    <Text Include="ressources\shaders\parts\litTextureShader2.txt" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

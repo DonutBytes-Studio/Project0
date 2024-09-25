@@ -45,6 +45,34 @@ Shader::Shader(const char* vertexFile, const char* fragmentFile)
 	glDeleteShader(vertexShader);
 	glDeleteShader(fragmentShader);
 }
+Shader::Shader(const char* vertexFile, std::string fragShaderData)
+{
+	std::string vertexCode = get_file_contents(vertexFile);
+	std::string fragmentCode = fragShaderData;
+
+	const char* vertexSource = vertexCode.c_str();
+	const char* fragmentSource = fragmentCode.c_str();
+
+	//VERTEX SHADER
+	GLuint vertexShader = glCreateShader(GL_VERTEX_SHADER);
+	glShaderSource(vertexShader, 1, &vertexSource, NULL);
+	glCompileShader(vertexShader);
+
+	//FRAGMENT SHADER
+	GLuint fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
+	glShaderSource(fragmentShader, 1, &fragmentSource, NULL);
+	glCompileShader(fragmentShader);
+
+	ID = glCreateProgram();
+
+	glAttachShader(ID, vertexShader);
+	glAttachShader(ID, fragmentShader);
+	glLinkProgram(ID);
+
+	// DELETE STUFF
+	glDeleteShader(vertexShader);
+	glDeleteShader(fragmentShader);
+}
 
 void Shader::Activate()
 {
