@@ -1,0 +1,42 @@
+﻿  main.cpp
+C:\Dev\C++\Project0\Project0\src\main.cpp(171,34): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+C:\Dev\C++\Project0\Project0\src\main.cpp(171,34): warning C4244:         with
+C:\Dev\C++\Project0\Project0\src\main.cpp(171,34): warning C4244:         [
+C:\Dev\C++\Project0\Project0\src\main.cpp(171,34): warning C4244:             T=float
+C:\Dev\C++\Project0\Project0\src\main.cpp(171,34): warning C4244:         ]
+C:\Dev\C++\Project0\Project0\src\main.cpp(172,34): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+C:\Dev\C++\Project0\Project0\src\main.cpp(172,34): warning C4244:         with
+C:\Dev\C++\Project0\Project0\src\main.cpp(172,34): warning C4244:         [
+C:\Dev\C++\Project0\Project0\src\main.cpp(172,34): warning C4244:             T=float
+C:\Dev\C++\Project0\Project0\src\main.cpp(172,34): warning C4244:         ]
+C:\Dev\C++\Project0\Project0\src\main.cpp(175,45): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+C:\Dev\C++\Project0\Project0\src\main.cpp(175,45): warning C4244:         with
+C:\Dev\C++\Project0\Project0\src\main.cpp(175,45): warning C4244:         [
+C:\Dev\C++\Project0\Project0\src\main.cpp(175,45): warning C4244:             T=float
+C:\Dev\C++\Project0\Project0\src\main.cpp(175,45): warning C4244:         ]
+C:\Dev\C++\Project0\Project0\src\main.cpp(176,45): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+C:\Dev\C++\Project0\Project0\src\main.cpp(176,45): warning C4244:         with
+C:\Dev\C++\Project0\Project0\src\main.cpp(176,45): warning C4244:         [
+C:\Dev\C++\Project0\Project0\src\main.cpp(176,45): warning C4244:             T=float
+C:\Dev\C++\Project0\Project0\src\main.cpp(176,45): warning C4244:         ]
+C:\Dev\C++\Project0\Project0\src\main.cpp(179,41): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+C:\Dev\C++\Project0\Project0\src\main.cpp(179,41): warning C4244:         with
+C:\Dev\C++\Project0\Project0\src\main.cpp(179,41): warning C4244:         [
+C:\Dev\C++\Project0\Project0\src\main.cpp(179,41): warning C4244:             T=float
+C:\Dev\C++\Project0\Project0\src\main.cpp(179,41): warning C4244:         ]
+C:\Dev\C++\Project0\Project0\src\main.cpp(180,41): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+C:\Dev\C++\Project0\Project0\src\main.cpp(180,41): warning C4244:         with
+C:\Dev\C++\Project0\Project0\src\main.cpp(180,41): warning C4244:         [
+C:\Dev\C++\Project0\Project0\src\main.cpp(180,41): warning C4244:             T=float
+C:\Dev\C++\Project0\Project0\src\main.cpp(180,41): warning C4244:         ]
+C:\Dev\C++\Project0\Project0\src\main.cpp(183,52): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+C:\Dev\C++\Project0\Project0\src\main.cpp(183,52): warning C4244:         with
+C:\Dev\C++\Project0\Project0\src\main.cpp(183,52): warning C4244:         [
+C:\Dev\C++\Project0\Project0\src\main.cpp(183,52): warning C4244:             T=float
+C:\Dev\C++\Project0\Project0\src\main.cpp(183,52): warning C4244:         ]
+C:\Dev\C++\Project0\Project0\src\main.cpp(184,52): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+C:\Dev\C++\Project0\Project0\src\main.cpp(184,52): warning C4244:         with
+C:\Dev\C++\Project0\Project0\src\main.cpp(184,52): warning C4244:         [
+C:\Dev\C++\Project0\Project0\src\main.cpp(184,52): warning C4244:             T=float
+C:\Dev\C++\Project0\Project0\src\main.cpp(184,52): warning C4244:         ]
+  Project0.vcxproj -> C:\Dev\C++\Project0\bin\x64\Debug\Project0.exe
