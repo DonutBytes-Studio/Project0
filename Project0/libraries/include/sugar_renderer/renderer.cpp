@@ -1,6 +1,6 @@
 #include"renderer.h"
 
-void Renderer::Draw(Shader& shader, glm::mat4& transformations, VAO& vao, GLsizeiptr size)
+void Renderer::IDraw(Shader& shader, glm::mat4& transformations, VAO& vao, GLsizeiptr size)
 {
 	shader.Activate();
 
@@ -12,19 +12,19 @@ void Renderer::Draw(Shader& shader, glm::mat4& transformations, VAO& vao, GLsize
 	vao.Unbind();
 }
 
-void Renderer::ClearScreen()
+void Renderer::IClearScreen()
 {
 	glClearColor(0.11f, 0.09f, 0.12f, 1.0f);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 }
 
-void Renderer::ClearScreen(glm::vec4 color)
+void Renderer::IClearScreen(glm::vec4 color)
 {
 	glClearColor(color.r, color.g, color.b, color.a);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 }
 
-void Renderer::ClearScreen(float r, float g, float b, float a)
+void Renderer::IClearScreen(float r, float g, float b, float a)
 {
 	glClearColor(r, g, b, a);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);

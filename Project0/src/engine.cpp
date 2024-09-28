@@ -1,6 +1,6 @@
 #include"engine.h"
 
-void Engine::Init(Logger& logger, int WINDOW_WIDTH, int WINDOW_HEIGHT, const char* title)
+void Engine::IInit(int& WINDOW_WIDTH, int& WINDOW_HEIGHT, const char* title)
 {
 	// INIT GLFW
 	glfwInit();
@@ -11,7 +11,7 @@ void Engine::Init(Logger& logger, int WINDOW_WIDTH, int WINDOW_HEIGHT, const cha
 
 	glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);
 
-	logger.log(INFO, "GLFW initialized");
+	Logger::log(INFO, "GLFW initialized");
 
 
 	//INIT WINDOW
@@ -22,16 +22,16 @@ void Engine::Init(Logger& logger, int WINDOW_WIDTH, int WINDOW_HEIGHT, const cha
 		glfwTerminate();
 	}
 	glfwMakeContextCurrent(Engine::window);
-	logger.log(INFO, "Window initialized");
+	Logger::log(INFO, "Window initialized");
 
 	//INIT OPENGL
 	gladLoadGL();
 	glViewport(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT);
 
-	logger.log(INFO, "OpenGL initialized");
+	Logger::log(INFO, "OpenGL initialized");
 }
 
-void Engine::TimeTick()
+void Engine::ITimeTick()
 {
 	Engine::crntTime = glfwGetTime();
 	Engine::deltaTime = crntTime - prevTime;

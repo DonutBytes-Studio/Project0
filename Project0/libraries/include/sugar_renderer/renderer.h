@@ -14,19 +14,36 @@
 
 class Renderer
 {
-private:
-	int transShaderLoc = 0;
-
 public:
-
-	glm::mat4 model = glm::mat4(1.0f);
 	glm::mat4 projection = glm::ortho(-5.0f, 5.0f, -5.0f, 5.0f, 0.0f, 10.0f);
 
-	void Draw(Shader& shader, glm::mat4& transformations, VAO& vao, GLsizeiptr size);
+private:
+	int transShaderLoc = 0;
+	glm::mat4 model = glm::mat4(1.0f);
 
-	void ClearScreen();
-	void ClearScreen(glm::vec4 color);
-	void ClearScreen(float r, float g, float b, float a);
+public:
+	static void Draw(Shader& shader, glm::mat4& transformations, VAO& vao, GLsizeiptr size) { return Get().IDraw(shader, transformations, vao, size); }
+	static void ClearScreen() { return Get().IClearScreen(); }
+	static void ClearScreen(glm::vec4 color) { return Get().IClearScreen(color); }
+	static void ClearScreen(float r, float g, float b, float a) { return Get().IClearScreen(r, g, b, a); }
 
+private:
+	void IDraw(Shader& shader, glm::mat4& transformations, VAO& vao, GLsizeiptr size);
+	void IClearScreen();
+	void IClearScreen(glm::vec4 color);
+	void IClearScreen(float r, float g, float b, float a);
+
+
+public:
+	Renderer(const Renderer&) = delete;
+
+	static Renderer& Get()
+	{
+		static Renderer instance;
+		return instance;
+	}
+
+private:
+	Renderer() {}
 };
 #endif

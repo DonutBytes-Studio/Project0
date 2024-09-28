@@ -1,10 +1,9 @@
 #include"gameObject.h"
 
-GameObject::GameObject(Shader& shader, Renderer& renderer, VAO& vao, GLsizeiptr indicesSize)
+GameObject::GameObject(Shader& shader, VAO& vao, GLsizeiptr indicesSize)
 {
 	GameObject::shader = &shader;
-	GameObject::renderer = &renderer;
-	GameObject::projection = renderer.projection;
+	GameObject::projection = Renderer::Get().projection;
 	GameObject::vao = &vao;
 	GameObject::indicesSize = indicesSize;
 }
@@ -18,7 +17,7 @@ void GameObject::Draw()
 	GameObject::objectMatrix = glm::scale(GameObject::objectMatrix, glm::vec3(GameObject::Scale, 0.0f));          //Scale the GameObject
 	GameObject::transformations = projection * GameObject::objectMatrix;
 
-	(*GameObject::renderer).Draw(*GameObject::shader, GameObject::transformations, (*GameObject::vao), indicesSize);
+	Renderer::Draw(*GameObject::shader, GameObject::transformations, (*GameObject::vao), indicesSize);
 }
 
 void GameObject::Draw(int numberOfLights, glm::vec4 lightColor[], glm::vec3 lightPos[], int tex0Unit, GLenum baseEnum, Texture base, int normalsUnit, GLenum normalsEnum, Texture normals)
@@ -51,5 +50,5 @@ void GameObject::Draw(int numberOfLights, glm::vec4 lightColor[], glm::vec3 ligh
 	GameObject::objectMatrix = glm::scale(GameObject::objectMatrix, glm::vec3(GameObject::Scale, 0.0f));          //Scale the GameObject
 	GameObject::transformations = projection * GameObject::objectMatrix;
 
-	(*GameObject::renderer).Draw(*GameObject::shader, GameObject::transformations, (*GameObject::vao), indicesSize);
+	Renderer::Draw(*GameObject::shader, GameObject::transformations, (*GameObject::vao), indicesSize);
 }

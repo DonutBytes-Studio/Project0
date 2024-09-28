@@ -2,6 +2,7 @@
 
 EBO::EBO(GLuint* indices, GLsizeiptr size)
 {
+	ObjectsManager::AddObject(this);
 	glGenBuffers(1, &ID);
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ID);
 	glBufferData(GL_ELEMENT_ARRAY_BUFFER, size, indices, GL_STATIC_DRAW);
@@ -19,5 +20,6 @@ void EBO::Unbind()
 
 void EBO::Delete()
 {
+	Logger::log(DEBUG, "Deleted an EBO");
 	glDeleteBuffers(1, &ID);
 }

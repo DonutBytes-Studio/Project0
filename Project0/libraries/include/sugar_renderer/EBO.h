@@ -1,9 +1,10 @@
 #ifndef EBO_H
 #define EBO_H
 
-#include <glad/glad.h>
+#include<glad/glad.h>
+#include<chocolate_engine/objectsManager.h>
 
-class EBO
+class EBO : public Object
 {
 public:
 	GLuint ID;
@@ -11,7 +12,7 @@ public:
 
 	void Bind();
 	void Unbind();
-	void Delete();
+	void Delete() override;
 };
 
 #endif

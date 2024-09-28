@@ -2,6 +2,7 @@
 
 VAO::VAO()
 {
+	ObjectsManager::AddObject(this);
 	glGenVertexArrays(1, &ID);
 }
 
@@ -25,5 +26,6 @@ void VAO::Unbind()
 
 void VAO::Delete()
 {
+	Logger::log(DEBUG, "Deleted a VAO");
 	glDeleteVertexArrays(1, &ID);
 }

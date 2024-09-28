@@ -7,10 +7,11 @@
 #include<sstream>
 #include<iostream>
 #include<cerrno>
+#include<chocolate_engine/objectsManager.h>
 
 std::string get_file_contents(const char* filename);
 
-class Shader
+class Shader : public Object
 {
 public:
 	GLuint ID;
@@ -39,7 +40,7 @@ public:
 	}
 
 	void Activate();
-	void Delete();
+	void Delete() override;
 
 private:
 	void compileErrors(unsigned int shader, const char* type);

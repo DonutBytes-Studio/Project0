@@ -19,6 +19,7 @@ std::string get_file_contents(const char* filename)
 
 Shader::Shader(const char* vertexFile, const char* fragmentFile)
 {
+	ObjectsManager::AddObject(this);
 	std::string vertexCode = get_file_contents(vertexFile);
 	std::string fragmentCode = get_file_contents(fragmentFile);
 
@@ -47,6 +48,7 @@ Shader::Shader(const char* vertexFile, const char* fragmentFile)
 }
 Shader::Shader(const char* vertexFile, std::string fragShaderData)
 {
+	ObjectsManager::AddObject(this);
 	std::string vertexCode = get_file_contents(vertexFile);
 	std::string fragmentCode = fragShaderData;
 
@@ -81,6 +83,7 @@ void Shader::Activate()
 
 void Shader::Delete()
 {
+	Logger::log(DEBUG, "Deleted a Shader");
 	glDeleteProgram(ID);
 }
 

@@ -2,6 +2,7 @@
 
 Texture::Texture(const char* image, GLenum texType, GLenum slot, GLenum format, GLenum pixelType)
 {
+	ObjectsManager::AddObject(this);
 	type = texType;
 	int widthImg, heightImg, numColCh;
 	stbi_set_flip_vertically_on_load(true);
@@ -43,5 +44,6 @@ void Texture::Unbind()
 
 void Texture::Delete()
 {
+	Logger::log(DEBUG, "Deleted a texture");
 	glDeleteTextures(1, &ID);
 }

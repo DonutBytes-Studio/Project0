@@ -30,8 +30,9 @@
     <ClCompile Include="src\engine.cpp" />
     <ClCompile Include="src\lights_test.cpp" />
     <ClCompile Include="libraries\include\glad\glad.c" />
-    <ClCompile Include="src\logger.cpp" />
+    <ClCompile Include="libraries\include\chocolate_engine\logger.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="libraries\include\chocolate_engine\objectsManager.cpp" />
     <ClCompile Include="src\shaderConstructor.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -43,7 +44,8 @@
     <ClInclude Include="libraries\include\sugar_renderer\VAO.h" />
     <ClInclude Include="libraries\include\sugar_renderer\VBO.h" />
     <ClInclude Include="src\engine.h" />
-    <ClInclude Include="src\logger.h" />
+    <ClInclude Include="libraries\include\chocolate_engine\logger.h" />
+    <ClInclude Include="libraries\include\chocolate_engine\objectsManager.h" />
     <ClInclude Include="src\shaderConstructor.h" />
   </ItemGroup>
   <ItemGroup>

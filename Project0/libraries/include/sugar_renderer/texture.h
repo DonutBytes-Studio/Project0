@@ -3,10 +3,11 @@
 
 #include<glad/glad.h>
 #include<stb/stb_image.h>
+#include<chocolate_engine/objectsManager.h>
 
 #include"shaderClass.h"
 
-class Texture
+class Texture : public Object
 {
 public:
 	GLuint ID;
@@ -17,7 +18,7 @@ public:
 
 	void Bind();
 	void Unbind();
-	void Delete();
+	void Delete() override;
 };
 
 #endif

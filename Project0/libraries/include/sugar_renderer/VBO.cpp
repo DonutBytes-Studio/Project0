@@ -2,6 +2,7 @@
 
 VBO::VBO(GLfloat* vertices, GLsizeiptr size)
 {
+	ObjectsManager::AddObject(this);
 	glGenBuffers(1, &ID);
 	glBindBuffer(GL_ARRAY_BUFFER, ID);
 	glBufferData(GL_ARRAY_BUFFER, size, vertices, GL_STATIC_DRAW);
@@ -19,5 +20,6 @@ void VBO::Unbind()
 
 void VBO::Delete()
 {
+	Logger::log(DEBUG, "Deleted a VBO");
 	glDeleteBuffers(1, &ID);
 }

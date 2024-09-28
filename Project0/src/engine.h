@@ -17,15 +17,15 @@
 #include<sugar_renderer/renderer.h>
 #include<sugar_renderer/gameObject.h>
 //#include"camera.h"
+#include<chocolate_engine/logger.h>
 
-#include"logger.h"
 #include"shaderConstructor.h"
 
 class Engine
 {
 public:
 	//WINDOW
-	GLFWwindow* window;
+	GLFWwindow* window = glfwCreateWindow(600, 600, "Default", NULL, NULL);
 
 	//BASIC MESHES
 	GLfloat squareVertices[20] =
@@ -35,22 +35,43 @@ public:
 		 0.5f,  0.5f, 0.0f,		1.0f, 1.0f,
 		 0.5f, -0.5f, 0.0f,		1.0f, 0.0f
 	};
+	GLsizeiptr squareVerticesSize = sizeof(squareVertices);
 
 	GLuint squareIndices[6] =
 	{
 		0, 1, 2,
 		0, 3, 2
 	};
+	GLsizeiptr squareIndicesSize = sizeof(squareIndices);
+
+	double deltaTime = 0.0;
+	double time = 0.0;
+private:
 
 	//FPS COUNTER
 	double prevTime = 0.0;
 	double crntTime = 0.0;
 
-	double deltaTime;
-	double time;
+public:
+	static void Init(int& WINDOW_WIDTH, int& WINDOW_HEIGHT, const char* TITLE) { return Get().IInit(WINDOW_WIDTH, WINDOW_HEIGHT, TITLE); }
+	static void TimeTick() { return Get().ITimeTick(); }
 
-	void Init(Logger& logger, int WINDOW_WIDTH, int WINDOW_HEIGHT, const char* TITLE);
-	void TimeTick();
+
+private:
+	void IInit(int& WINDOW_WIDTH, int& WINDOW_HEIGHT, const char* TITLE);
+	void ITimeTick();
+
+public:
+	Engine(const Engine&) = delete;
+
+	static Engine& Get()
+	{
+		static Engine instance;
+		return instance;
+	}
+
+private:
+	Engine() {}
 };
 
 #endif

@@ -7,22 +7,17 @@ int main()
 	int WINDOW_HEIGHT = 720;
 	const int LIGHTS_NUMBER = 1;
 
-	// INSTANCES
-	Logger logger; // Create logger instance
-	Engine engine; // Create engine instance
-	engine.Init(logger, WINDOW_WIDTH, WINDOW_HEIGHT, "Project0");
-	Renderer renderer;// Create renderer instance
+	// Engine init
+	Engine& engine = Engine::Get();
+	engine.Init(WINDOW_WIDTH, WINDOW_HEIGHT, "Project0");
 
 	// VAO
 	VAO squareVAO;
 	squareVAO.Bind();
-	VBO squareVBO(engine.squareVertices, sizeof(engine.squareVertices));
-	EBO squareEBO(engine.squareIndices, sizeof(engine.squareIndices));
+	VBO squareVBO(engine.squareVertices, engine.squareVerticesSize);
+	EBO squareEBO(engine.squareIndices, engine.squareIndicesSize);
 	squareVAO.LinkAttrib(squareVBO, 0, 3, GL_FLOAT, 5 * sizeof(float), (void*)0);
 	squareVAO.LinkAttrib(squareVBO, 1, 2, GL_FLOAT, 5 * sizeof(float), (void*)(3 * sizeof(float)));
-	squareVAO.Unbind();
-	squareVBO.Unbind();
-	squareEBO.Unbind();
 
 	// SHADERS
 	Shader colorShaderProgram("ressources/shaders/default.vert", "ressources/shaders/color.frag");
@@ -41,11 +36,11 @@ int main()
 	normalsTex.texUnit(litTextureShaderProgram, "normals", 1);
 
 	// GAME VARIABLES
-	GameObject player(litTextureShaderProgram, renderer, squareVAO, sizeof(engine.squareIndices));
+	GameObject player(litTextureShaderProgram, squareVAO, engine.squareIndicesSize);
 	glm::vec2 velocity(0.0f, 0.0f);
 	bool isGrounded = true;
 
-	GameObject light(colorShaderProgram, renderer, squareVAO, sizeof(engine.squareIndices));
+	GameObject light(colorShaderProgram, squareVAO, engine.squareIndicesSize);
 	light.Position = glm::vec2(0.0f, 3.0f);
 	light.Scale = glm::vec2(0.2f, 0.2f);
 	glm::vec4 lightsColors[LIGHTS_NUMBER] =
@@ -58,7 +53,7 @@ int main()
 	{
 		// START LOOP
 		engine.TimeTick();
-		renderer.ClearScreen();
+		Renderer::ClearScreen();
 
 		// GAME LOGIC
 		// Inputs
@@ -111,16 +106,7 @@ int main()
 
 
 	//END
-	squareVAO.Delete();
-	squareVBO.Delete();
-	squareEBO.Delete();
-	baseTexture.Delete();
-	normalsTex.Delete();
-	colorShaderProgram.Delete();
-	litTextureShaderProgram.Delete();
-	unlitTextureShaderProgram.Delete();
-	UVShaderProgram.Delete();
-	windowCoordShaderProgram.Delete();
+	ObjectsManager::DeleteAllObjects();
 
 	glfwDestroyWindow(engine.window);
 	glfwTerminate();
