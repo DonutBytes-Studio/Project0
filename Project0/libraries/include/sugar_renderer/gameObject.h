@@ -20,11 +20,6 @@ public:
 	glm::vec2 Position = glm::vec2(0.0f, 0.0f);
 	float Rotation = 0.0f;
 
-	glm::mat4 objectMatrix = glm::mat4(1.0f);
-
-	glm::mat4 model = glm::mat4(1.0f);
-	glm::mat4 projection = glm::mat4(1.0f);
-	glm::mat4 transformations = glm::mat4(1.0f);
 	VAO* vao;
 	Shader* shader;
 	GLsizeiptr indicesSize;
@@ -32,7 +27,9 @@ public:
 	GameObject(Shader& shader, VAO& vao, GLsizeiptr indicesSize);
 
 	void Draw();
-	void Draw(int numberOfLights, glm::vec4 lightColor[], glm::vec3 lightPos[], int tex0Unit, GLenum baseEnum, Texture base, int normalsUnit, GLenum normalsEnum, Texture normals);
+	void DrawArray(GLint first, GLsizei count);
+	void DrawColor(glm::vec4 color);
+	void DrawLitTexture(int numberOfLights, glm::vec4 lightColor[], glm::vec3 lightPos[], int tex0Unit, GLenum baseEnum, Texture base, int normalsUnit, GLenum normalsEnum, Texture normals);
 };
 
 #endif

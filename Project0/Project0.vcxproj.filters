@@ -18,7 +18,7 @@
     <ClCompile Include="libraries\include\glad\glad.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\lights_test.cpp">
+    <ClCompile Include="src\lights_test_OLD.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="libraries\include\sugar_renderer\VAO.cpp">
@@ -45,19 +45,28 @@
     <ClCompile Include="libraries\include\stb\stb.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\main.cpp">
+    <ClCompile Include="src\boing.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\engine.cpp">
+    <ClCompile Include="libraries\include\chocolate_engine\engine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="libraries\include\chocolate_engine\logger.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\shaderConstructor.cpp">
+    <ClCompile Include="libraries\include\chocolate_engine\shaderConstructor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="libraries\include\chocolate_engine\objectsManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libraries\include\chocolate_engine\input.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lights_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -83,16 +92,19 @@
     <ClInclude Include="libraries\include\sugar_renderer\gameObject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\engine.h">
+    <ClInclude Include="libraries\include\chocolate_engine\engine.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="libraries\include\chocolate_engine\logger.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\shaderConstructor.h">
+    <ClInclude Include="libraries\include\chocolate_engine\shaderConstructor.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="libraries\include\chocolate_engine\objectsManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libraries\include\chocolate_engine\input.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -103,6 +115,7 @@
     <None Include="ressources\shaders\UV.frag" />
     <None Include="ressources\shaders\windowCoord.frag" />
     <None Include="ressources\shaders\unlitTexture.frag" />
+    <None Include="ressources\shaders\circle.frag" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="ressources\textures\Donut.png">

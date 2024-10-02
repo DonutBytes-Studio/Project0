@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="libraries\include\chocolate_engine\input.cpp" />
     <ClCompile Include="libraries\include\stb\stb.cpp" />
     <ClCompile Include="libraries\include\sugar_renderer\EBO.cpp" />
     <ClCompile Include="libraries\include\sugar_renderer\gameObject.cpp" />
@@ -27,15 +28,18 @@
     <ClCompile Include="libraries\include\sugar_renderer\texture.cpp" />
     <ClCompile Include="libraries\include\sugar_renderer\VAO.cpp" />
     <ClCompile Include="libraries\include\sugar_renderer\VBO.cpp" />
-    <ClCompile Include="src\engine.cpp" />
-    <ClCompile Include="src\lights_test.cpp" />
+    <ClCompile Include="libraries\include\chocolate_engine\engine.cpp" />
+    <ClCompile Include="src\lights_test_OLD.cpp" />
     <ClCompile Include="libraries\include\glad\glad.c" />
     <ClCompile Include="libraries\include\chocolate_engine\logger.cpp" />
-    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\boing.cpp" />
     <ClCompile Include="libraries\include\chocolate_engine\objectsManager.cpp" />
-    <ClCompile Include="src\shaderConstructor.cpp" />
+    <ClCompile Include="libraries\include\chocolate_engine\shaderConstructor.cpp" />
+    <ClCompile Include="src\lights_test.cpp" />
+    <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="libraries\include\chocolate_engine\input.h" />
     <ClInclude Include="libraries\include\sugar_renderer\EBO.h" />
     <ClInclude Include="libraries\include\sugar_renderer\gameObject.h" />
     <ClInclude Include="libraries\include\sugar_renderer\renderer.h" />
@@ -43,12 +47,13 @@
     <ClInclude Include="libraries\include\sugar_renderer\texture.h" />
     <ClInclude Include="libraries\include\sugar_renderer\VAO.h" />
     <ClInclude Include="libraries\include\sugar_renderer\VBO.h" />
-    <ClInclude Include="src\engine.h" />
+    <ClInclude Include="libraries\include\chocolate_engine\engine.h" />
     <ClInclude Include="libraries\include\chocolate_engine\logger.h" />
     <ClInclude Include="libraries\include\chocolate_engine\objectsManager.h" />
-    <ClInclude Include="src\shaderConstructor.h" />
+    <ClInclude Include="libraries\include\chocolate_engine\shaderConstructor.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="ressources\shaders\circle.frag" />
     <None Include="ressources\shaders\color.frag" />
     <None Include="ressources\shaders\default.vert" />
     <None Include="ressources\shaders\litTexture.frag" />
