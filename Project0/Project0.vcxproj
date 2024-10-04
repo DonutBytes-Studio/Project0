@@ -23,6 +23,7 @@
     <ClCompile Include="libraries\include\stb\stb.cpp" />
     <ClCompile Include="libraries\include\sugar_renderer\EBO.cpp" />
     <ClCompile Include="libraries\include\sugar_renderer\gameObject.cpp" />
+    <ClCompile Include="libraries\include\sugar_renderer\particle.cpp" />
     <ClCompile Include="libraries\include\sugar_renderer\renderer.cpp" />
     <ClCompile Include="libraries\include\sugar_renderer\shaderClass.cpp" />
     <ClCompile Include="libraries\include\sugar_renderer\texture.cpp" />
@@ -42,6 +43,7 @@
     <ClInclude Include="libraries\include\chocolate_engine\input.h" />
     <ClInclude Include="libraries\include\sugar_renderer\EBO.h" />
     <ClInclude Include="libraries\include\sugar_renderer\gameObject.h" />
+    <ClInclude Include="libraries\include\sugar_renderer\particle.h" />
     <ClInclude Include="libraries\include\sugar_renderer\renderer.h" />
     <ClInclude Include="libraries\include\sugar_renderer\shaderClass.h" />
     <ClInclude Include="libraries\include\sugar_renderer\texture.h" />

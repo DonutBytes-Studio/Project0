@@ -1,13 +1,15 @@
 #ifndef ENGINE_H
 #define ENGINE_H
 
-#include <iostream>
+#include<iostream>
+#include<algorithm>
 #include<glad/glad.h>
 #include<GLFW/glfw3.h>
 #include<stb/stb_image.h>
 #include<glm/glm.hpp>
 #include<glm/gtc/matrix_transform.hpp>
 #include<glm/gtc/type_ptr.hpp>
+#include<glm/gtx/norm.hpp>
 
 #include<sugar_renderer/VAO.h>
 #include<sugar_renderer/VBO.h>
@@ -16,6 +18,7 @@
 #include<sugar_renderer/texture.h>
 #include<sugar_renderer/renderer.h>
 #include<sugar_renderer/gameObject.h>
+#include<sugar_renderer/particle.h>
 //#include"camera.h"
 #include<chocolate_engine/logger.h>
 #include<chocolate_engine/input.h>
@@ -53,13 +56,22 @@ public:
 	};
 	GLsizeiptr squareIndicesSize = sizeof(squareIndices);
 
+	//BASIC SHADERS
+	Shader* simpleParticleShaderProgram;
+
 	double deltaTime = 0.0;
 	double time = 0.0;
+
+	enum SHADERS
+	{
+		PARTICLE
+	};
 private:
 
 	//FPS COUNTER
 	double prevTime = 0.0;
 	double crntTime = 0.0;
+
 
 public:
 	static void Init(int& WINDOW_WIDTH, int& WINDOW_HEIGHT, const char* TITLE) { return Get().IInit(WINDOW_WIDTH, WINDOW_HEIGHT, TITLE); }

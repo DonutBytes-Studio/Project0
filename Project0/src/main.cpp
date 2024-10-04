@@ -2,33 +2,10 @@
 
 int main()
 {
-	struct Body
-	{
-		GameObject* gameObject;
-
-		Body(GameObject* g)
-		{
-			gameObject = g;
-		}
-
-
-		glm::vec2 Velocity = glm::vec2(0.0f, 0.0f);
-		glm::vec2 Acceleration = glm::vec2(0.0f, 0.0f);
-		float Mass = 0.001f;
-
-		void Update(float deltaTime)
-		{
-			(*gameObject).Position += Velocity * deltaTime;
-			Velocity += Acceleration * deltaTime;
-			Acceleration = glm::vec2(0.0f, 0.0f);
-		}
-	};
-
 	//CONSTANTS
 	int WINDOW_WIDTH = 720;
 	int WINDOW_HEIGHT = 720;
-	const int LIGHTS_NUMBER = 1;
-	const float MIN_DISTANCE = 0.01f;
+	const float MIN_DISTANCE = 0.05f;
 
 	// Engine init
 	Engine& engine = Engine::Get();
@@ -47,24 +24,28 @@ int main()
 	// TEXTURES
 
 	// GAME VARIABLES
-	int NB_PARTICLES = 800;
-	std::vector<Body> bodies;
-	bodies.reserve(NB_PARTICLES);
-	Body* refBody;
+	int NB_PARTICLES = 1000;
+	std::vector<Particle> particles;
+	particles.reserve(NB_PARTICLES);
+	Particle* refParticle;
 
 	srand(time(NULL));
 
 	for (unsigned int i = 0; i < NB_PARTICLES; ++i)
 	{
-		refBody = nullptr;
-		refBody = new Body(new GameObject(circleProgram, vao, engine.triangleVerticesSize));
-		(*refBody).gameObject->Scale = glm::vec2(0.02f, 0.02f);
-		(*refBody).gameObject->Position = glm::vec2(((rand() % 800 + 1) - 400.5f)/100, ((rand() % 800 + 1) - 400.5f)/100);
-		bodies.push_back(*refBody);
+		refParticle = nullptr;
+		refParticle = new Particle();
+		(*refParticle).Scale = glm::vec2(0.02f, 0.02f);
+		(*refParticle).Position = glm::vec2(((rand() % 800 + 1) - 400.5f)/100, ((rand() % 800 + 1) - 400.5f)/100);
+		//(*refParticle).Position = glm::vec2(0.0f, 0.0f + i/1000.0f);
+		particles.push_back(*refParticle);
 	}
 
 	glm::vec2 p1, p2, r, a1 = glm::vec2(0.0f, 0.0f);
-	float mag_sq, mag = 0.0f;
+	float mag_sq, mag, speed = 0.0f;
+
+	Renderer& renderer = Renderer::Get();
+	renderer.transformations = glm::mat4(1.0f);
 
 	//MAIN LOOP
 	while (!glfwWindowShouldClose(engine.window))
@@ -73,43 +54,48 @@ int main()
 		engine.TimeTick();
 		Renderer::ClearScreen();
 
-		// GAME LOGIC
+		//FPS
+		std::string FPS = std::to_string((1.0 / engine.deltaTime));
+		std::string ms = std::to_string(engine.deltaTime * 1000);
+		std::string newTitle = "Test - " + FPS + " FPS / " + ms + " ms.";
+		glfwSetWindowTitle(engine.window, newTitle.c_str());
 
-		for (int i = 0; i < bodies.size(); i++)
+		// GAME LOGIC
+		circleProgram.Activate();
+		vao.Bind();
+		for (int i = 0; i < particles.size(); i++)
 		{
-			p1 = bodies[i].gameObject->Position;
-			for (int j = 0; j < bodies.size(); j++)
+			refParticle = &particles[i];
+			p1 = (*refParticle).Position;
+			for (int j = 0; j < particles.size(); j++)
 			{
 				if (j != i)
 				{
-					p2 = bodies[j].gameObject->Position;
-					float m2 = bodies[j].Mass;
+					p2 = particles[j].Position;
+					float m2 = particles[j].Mass;
 
 					r = p2 - p1;
 					mag_sq = r.x * r.x + r.y * r.y;
 					mag = sqrt(mag_sq);
-					a1 = (m2 / (max(mag_sq, MIN_DISTANCE) * mag)) * r;
+					a1 = (m2 / (max(mag_sq, MIN_DISTANCE * mag))) * r;
 
-					bodies[i].Acceleration += a1;
+					(*refParticle).Acceleration += a1;
 				}
 			}
-		}
 
-		// RENDER
-		circleProgram.Activate();
+			(*refParticle).Update();
 
-		for (int i = 0; i < bodies.size(); i++)
-		{
-			bodies[i].Update(engine.deltaTime);
-			circleProgram.set4f("color", (bodies[i].Velocity.x + 0.5f), (bodies[i].Velocity.y + 0.5f), 0.0f, 1.0f);
-			bodies[i].gameObject->DrawArray(0, 3);
+			//RENDER
+			speed = glm::length2((*refParticle).Velocity);
+			(*refParticle).Color = glm::vec4(speed, speed, (speed/2) + 0.5f, 1.0f);
+			(*refParticle).Draw(circleProgram);
 		}
+		vao.Unbind();
 
 		// END LOOP
 		glfwSwapBuffers(engine.window);
 		glfwPollEvents();
 	}
-
 
 	//END
 	ObjectsManager::DeleteAllObjects();

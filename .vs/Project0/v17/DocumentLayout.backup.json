@@ -7,20 +7,16 @@
       "RelativeMoniker": "D:0:0:{6343B032-B281-4841-B80C-200A9031A084}|Project0\\Project0.vcxproj|solutionrelative:Project0\\src\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6343B032-B281-4841-B80C-200A9031A084}|Project0\\Project0.vcxproj|C:\\Dev\\C\u002B\u002B\\Project0\\Project0\\ressources\\shaders\\circle.frag||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{6343B032-B281-4841-B80C-200A9031A084}|Project0\\Project0.vcxproj|solutionrelative:Project0\\ressources\\shaders\\circle.frag||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{6343B032-B281-4841-B80C-200A9031A084}|Project0\\Project0.vcxproj|C:\\Dev\\C\u002B\u002B\\Project0\\Project0\\libraries\\include\\chocolate_engine\\engine.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6343B032-B281-4841-B80C-200A9031A084}|Project0\\Project0.vcxproj|solutionrelative:Project0\\libraries\\include\\chocolate_engine\\engine.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6343B032-B281-4841-B80C-200A9031A084}|Project0\\Project0.vcxproj|C:\\Dev\\C\u002B\u002B\\Project0\\Project0\\libraries\\include\\sugar_renderer\\gameObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6343B032-B281-4841-B80C-200A9031A084}|Project0\\Project0.vcxproj|solutionrelative:Project0\\libraries\\include\\sugar_renderer\\gameObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{6343B032-B281-4841-B80C-200A9031A084}|Project0\\Project0.vcxproj|C:\\Dev\\C\u002B\u002B\\Project0\\Project0\\libraries\\include\\sugar_renderer\\particle.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6343B032-B281-4841-B80C-200A9031A084}|Project0\\Project0.vcxproj|solutionrelative:Project0\\libraries\\include\\sugar_renderer\\particle.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6343B032-B281-4841-B80C-200A9031A084}|Project0\\Project0.vcxproj|C:\\Dev\\C\u002B\u002B\\Project0\\Project0\\libraries\\include\\sugar_renderer\\renderer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6343B032-B281-4841-B80C-200A9031A084}|Project0\\Project0.vcxproj|solutionrelative:Project0\\libraries\\include\\sugar_renderer\\renderer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6343B032-B281-4841-B80C-200A9031A084}|Project0\\Project0.vcxproj|C:\\Dev\\C\u002B\u002B\\Project0\\Project0\\libraries\\include\\sugar_renderer\\gameObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6343B032-B281-4841-B80C-200A9031A084}|Project0\\Project0.vcxproj|solutionrelative:Project0\\libraries\\include\\sugar_renderer\\gameObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{6343B032-B281-4841-B80C-200A9031A084}|Project0\\Project0.vcxproj|C:\\Dev\\C\u002B\u002B\\Project0\\Project0\\libraries\\include\\sugar_renderer\\particle.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6343B032-B281-4841-B80C-200A9031A084}|Project0\\Project0.vcxproj|solutionrelative:Project0\\libraries\\include\\sugar_renderer\\particle.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -40,7 +36,7 @@
               "RelativeDocumentMoniker": "Project0\\src\\main.cpp",
               "ToolTip": "C:\\Dev\\C\u002B\u002B\\Project0\\Project0\\src\\main.cpp",
               "RelativeToolTip": "Project0\\src\\main.cpp",
-              "ViewState": "AgIAAFUAAAAAAAAAAAAuwGcAAABqAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAuwB4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-10-02T20:20:40.802Z",
               "IsPinned": true,
@@ -49,53 +45,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "circle.frag",
-              "DocumentMoniker": "C:\\Dev\\C\u002B\u002B\\Project0\\Project0\\ressources\\shaders\\circle.frag",
-              "RelativeDocumentMoniker": "Project0\\ressources\\shaders\\circle.frag",
-              "ToolTip": "C:\\Dev\\C\u002B\u002B\\Project0\\Project0\\ressources\\shaders\\circle.frag",
-              "RelativeToolTip": "Project0\\ressources\\shaders\\circle.frag",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-10-02T22:45:20.127Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "renderer.h",
-              "DocumentMoniker": "C:\\Dev\\C\u002B\u002B\\Project0\\Project0\\libraries\\include\\sugar_renderer\\renderer.h",
-              "RelativeDocumentMoniker": "Project0\\libraries\\include\\sugar_renderer\\renderer.h",
-              "ToolTip": "C:\\Dev\\C\u002B\u002B\\Project0\\Project0\\libraries\\include\\sugar_renderer\\renderer.h",
-              "RelativeToolTip": "Project0\\libraries\\include\\sugar_renderer\\renderer.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
+              "Title": "engine.h",
+              "DocumentMoniker": "C:\\Dev\\C\u002B\u002B\\Project0\\Project0\\libraries\\include\\chocolate_engine\\engine.h",
+              "RelativeDocumentMoniker": "Project0\\libraries\\include\\chocolate_engine\\engine.h",
+              "ToolTip": "C:\\Dev\\C\u002B\u002B\\Project0\\Project0\\libraries\\include\\chocolate_engine\\engine.h",
+              "RelativeToolTip": "Project0\\libraries\\include\\chocolate_engine\\engine.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-02T20:49:18.31Z",
+              "WhenOpened": "2024-10-04T16:39:17.83Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "gameObject.cpp",
-              "DocumentMoniker": "C:\\Dev\\C\u002B\u002B\\Project0\\Project0\\libraries\\include\\sugar_renderer\\gameObject.cpp",
-              "RelativeDocumentMoniker": "Project0\\libraries\\include\\sugar_renderer\\gameObject.cpp",
-              "ToolTip": "C:\\Dev\\C\u002B\u002B\\Project0\\Project0\\libraries\\include\\sugar_renderer\\gameObject.cpp",
-              "RelativeToolTip": "Project0\\libraries\\include\\sugar_renderer\\gameObject.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAYAAAAAAAAAA==",
+              "Title": "particle.cpp",
+              "DocumentMoniker": "C:\\Dev\\C\u002B\u002B\\Project0\\Project0\\libraries\\include\\sugar_renderer\\particle.cpp",
+              "RelativeDocumentMoniker": "Project0\\libraries\\include\\sugar_renderer\\particle.cpp",
+              "ToolTip": "C:\\Dev\\C\u002B\u002B\\Project0\\Project0\\libraries\\include\\sugar_renderer\\particle.cpp",
+              "RelativeToolTip": "Project0\\libraries\\include\\sugar_renderer\\particle.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-10-02T20:43:54.521Z",
+              "WhenOpened": "2024-10-04T16:14:59.415Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "gameObject.h",
-              "DocumentMoniker": "C:\\Dev\\C\u002B\u002B\\Project0\\Project0\\libraries\\include\\sugar_renderer\\gameObject.h",
-              "RelativeDocumentMoniker": "Project0\\libraries\\include\\sugar_renderer\\gameObject.h",
-              "ToolTip": "C:\\Dev\\C\u002B\u002B\\Project0\\Project0\\libraries\\include\\sugar_renderer\\gameObject.h",
-              "RelativeToolTip": "Project0\\libraries\\include\\sugar_renderer\\gameObject.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAsAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "particle.h",
+              "DocumentMoniker": "C:\\Dev\\C\u002B\u002B\\Project0\\Project0\\libraries\\include\\sugar_renderer\\particle.h",
+              "RelativeDocumentMoniker": "Project0\\libraries\\include\\sugar_renderer\\particle.h",
+              "ToolTip": "C:\\Dev\\C\u002B\u002B\\Project0\\Project0\\libraries\\include\\sugar_renderer\\particle.h",
+              "RelativeToolTip": "Project0\\libraries\\include\\sugar_renderer\\particle.h",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAqwB4AAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-02T20:43:31.439Z",
+              "WhenOpened": "2024-10-04T16:15:04.548Z",
               "EditorCaption": ""
             }
           ]

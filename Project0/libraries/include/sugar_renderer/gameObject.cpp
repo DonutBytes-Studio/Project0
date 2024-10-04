@@ -26,7 +26,6 @@ void GameObject::DrawArray(GLint first, GLsizei count)
 	Renderer& renderer = Renderer::Get();
 
 	renderer.objectMatrix = glm::mat4(1.0f);
-	renderer.transformations = glm::mat4(1.0f);
 
 	renderer.objectMatrix = glm::translate(renderer.objectMatrix, glm::vec3(GameObject::Position, 0.0f));   //Move it to the GameObject position
 	renderer.objectMatrix = glm::scale(renderer.objectMatrix, glm::vec3(GameObject::Scale, 0.0f));          //Scale the GameObject
