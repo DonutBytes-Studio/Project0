@@ -29,7 +29,6 @@ void GameObject::DrawArray(GLint first, GLsizei count)
 
 	renderer.objectMatrix = glm::translate(renderer.objectMatrix, glm::vec3(GameObject::Position, 0.0f));   //Move it to the GameObject position
 	renderer.objectMatrix = glm::scale(renderer.objectMatrix, glm::vec3(GameObject::Scale, 0.0f));          //Scale the GameObject
-	renderer.transformations = renderer.projection * renderer.objectMatrix;
 
 	Renderer::DrawArrays(*GameObject::shader, renderer.transformations, (*GameObject::vao), indicesSize, 0, 3);
 }
@@ -47,7 +46,6 @@ void GameObject::DrawColor(glm::vec4 color)
 
 	renderer.objectMatrix = glm::translate(renderer.objectMatrix, glm::vec3(GameObject::Position, 0.0f));   //Move it to the GameObject position
 	renderer.objectMatrix = glm::scale(renderer.objectMatrix, glm::vec3(GameObject::Scale, 0.0f));          //Scale the GameObject
-	renderer.transformations = Renderer::Get().projection * renderer.objectMatrix;
 
 	Renderer::Draw(*GameObject::shader, renderer.transformations, (*GameObject::vao), indicesSize);
 }
@@ -82,7 +80,6 @@ void GameObject::DrawLitTexture(int numberOfLights, glm::vec4 lightColor[], glm:
 
 	renderer.objectMatrix = glm::translate(renderer.objectMatrix, glm::vec3(GameObject::Position, 0.0f));   //Move it to the GameObject position
 	renderer.objectMatrix = glm::scale(renderer.objectMatrix, glm::vec3(GameObject::Scale, 0.0f));          //Scale the GameObject
-	renderer.transformations = Renderer::Get().projection * renderer.objectMatrix;
 
 	Renderer::Draw(*GameObject::shader, renderer.transformations, (*GameObject::vao), indicesSize);
 }

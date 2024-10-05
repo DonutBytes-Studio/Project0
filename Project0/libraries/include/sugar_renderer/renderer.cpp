@@ -4,6 +4,8 @@ void Renderer::IDraw(Shader& shader, glm::mat4& transformations, VAO& vao, GLsiz
 {
 	shader.Activate();
 
+	Renderer::transformations = Renderer::projection * Renderer::view * Renderer::objectMatrix;
+
 	Renderer::transShaderLoc = glGetUniformLocation(shader.ID, "transformations");
 	glUniformMatrix4fv(transShaderLoc, 1, GL_FALSE, glm::value_ptr(transformations));
 
@@ -15,6 +17,8 @@ void Renderer::IDraw(Shader& shader, glm::mat4& transformations, VAO& vao, GLsiz
 void Renderer::IDrawArrays(Shader& shader, glm::mat4& transformations, VAO& vao, GLsizeiptr size, GLint first, GLsizei count)
 {
 	shader.Activate();
+
+	Renderer::transformations = Renderer::projection * Renderer::view * Renderer::objectMatrix;
 
 	Renderer::transShaderLoc = glGetUniformLocation(shader.ID, "transformations");
 	glUniformMatrix4fv(transShaderLoc, 1, GL_FALSE, glm::value_ptr(transformations));

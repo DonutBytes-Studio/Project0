@@ -24,6 +24,8 @@ void Engine::IInit(int& WINDOW_WIDTH, int& WINDOW_HEIGHT, const char* title)
 	glfwMakeContextCurrent(Engine::window);
 	Logger::log(INFO, "Window initialized");
 
+	Engine::window_ratio = WINDOW_WIDTH / WINDOW_HEIGHT;
+
 	//INIT OPENGL
 	gladLoadGL();
 	glViewport(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT);

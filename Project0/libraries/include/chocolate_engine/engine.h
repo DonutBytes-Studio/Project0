@@ -3,6 +3,9 @@
 
 #include<iostream>
 #include<algorithm>
+#include<cstdlib>
+#include<ctime>
+
 #include<glad/glad.h>
 #include<GLFW/glfw3.h>
 #include<stb/stb_image.h>
@@ -19,7 +22,7 @@
 #include<sugar_renderer/renderer.h>
 #include<sugar_renderer/gameObject.h>
 #include<sugar_renderer/particle.h>
-//#include"camera.h"
+#include<sugar_renderer/camera.h>
 #include<chocolate_engine/logger.h>
 #include<chocolate_engine/input.h>
 
@@ -57,7 +60,6 @@ public:
 	GLsizeiptr squareIndicesSize = sizeof(squareIndices);
 
 	//BASIC SHADERS
-	Shader* simpleParticleShaderProgram;
 
 	double deltaTime = 0.0;
 	double time = 0.0;
@@ -66,6 +68,8 @@ public:
 	{
 		PARTICLE
 	};
+
+	float window_ratio;
 private:
 
 	//FPS COUNTER
