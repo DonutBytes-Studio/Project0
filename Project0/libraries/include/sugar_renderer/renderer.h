@@ -15,10 +15,10 @@
 class Renderer
 {
 public:
+	glm::mat4 projection = glm::ortho(-5.0f, 5.0f, -5.0f, 5.0f, 0.0f, 10.0f);
+	glm::mat4 model = glm::mat4(1.0f);
 	glm::mat4 transformations = glm::mat4(1.0f);
 	glm::mat4 objectMatrix = glm::mat4(1.0f);
-	glm::mat4 view = glm::mat4(1.0f);
-	glm::mat4 projection = glm::ortho(-5.0f, 5.0f, -5.0f, 5.0f);
 
 private:
 	int transShaderLoc = 0;

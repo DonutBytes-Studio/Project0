@@ -11,12 +11,12 @@
       "RelativeMoniker": "D:0:0:{6343B032-B281-4841-B80C-200A9031A084}|Project0\\Project0.vcxproj|solutionrelative:Project0\\libraries\\include\\chocolate_engine\\engine.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6343B032-B281-4841-B80C-200A9031A084}|Project0\\Project0.vcxproj|C:\\Dev\\C\u002B\u002B\\Project0\\Project0\\libraries\\include\\sugar_renderer\\camera.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6343B032-B281-4841-B80C-200A9031A084}|Project0\\Project0.vcxproj|solutionrelative:Project0\\libraries\\include\\sugar_renderer\\camera.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{6343B032-B281-4841-B80C-200A9031A084}|Project0\\Project0.vcxproj|C:\\Dev\\C\u002B\u002B\\Project0\\Project0\\libraries\\include\\sugar_renderer\\particle.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6343B032-B281-4841-B80C-200A9031A084}|Project0\\Project0.vcxproj|solutionrelative:Project0\\libraries\\include\\sugar_renderer\\particle.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6343B032-B281-4841-B80C-200A9031A084}|Project0\\Project0.vcxproj|C:\\Dev\\C\u002B\u002B\\Project0\\Project0\\libraries\\include\\sugar_renderer\\camera.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6343B032-B281-4841-B80C-200A9031A084}|Project0\\Project0.vcxproj|solutionrelative:Project0\\libraries\\include\\sugar_renderer\\camera.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{6343B032-B281-4841-B80C-200A9031A084}|Project0\\Project0.vcxproj|C:\\Dev\\C\u002B\u002B\\Project0\\Project0\\libraries\\include\\sugar_renderer\\particle.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6343B032-B281-4841-B80C-200A9031A084}|Project0\\Project0.vcxproj|solutionrelative:Project0\\libraries\\include\\sugar_renderer\\particle.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -36,7 +36,7 @@
               "RelativeDocumentMoniker": "Project0\\src\\main.cpp",
               "ToolTip": "C:\\Dev\\C\u002B\u002B\\Project0\\Project0\\src\\main.cpp",
               "RelativeToolTip": "Project0\\src\\main.cpp",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAuwB4AAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAuwB4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-10-02T20:20:40.802Z",
               "IsPinned": true,
@@ -50,35 +50,35 @@
               "RelativeDocumentMoniker": "Project0\\libraries\\include\\chocolate_engine\\engine.h",
               "ToolTip": "C:\\Dev\\C\u002B\u002B\\Project0\\Project0\\libraries\\include\\chocolate_engine\\engine.h",
               "RelativeToolTip": "Project0\\libraries\\include\\chocolate_engine\\engine.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-05T23:02:35.491Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "camera.h",
-              "DocumentMoniker": "C:\\Dev\\C\u002B\u002B\\Project0\\Project0\\libraries\\include\\sugar_renderer\\camera.h",
-              "RelativeDocumentMoniker": "Project0\\libraries\\include\\sugar_renderer\\camera.h",
-              "ToolTip": "C:\\Dev\\C\u002B\u002B\\Project0\\Project0\\libraries\\include\\sugar_renderer\\camera.h",
-              "RelativeToolTip": "Project0\\libraries\\include\\sugar_renderer\\camera.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-05T22:34:38.576Z",
+              "WhenOpened": "2024-10-04T16:39:17.83Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "camera.cpp",
-              "DocumentMoniker": "C:\\Dev\\C\u002B\u002B\\Project0\\Project0\\libraries\\include\\sugar_renderer\\camera.cpp",
-              "RelativeDocumentMoniker": "Project0\\libraries\\include\\sugar_renderer\\camera.cpp",
-              "ToolTip": "C:\\Dev\\C\u002B\u002B\\Project0\\Project0\\libraries\\include\\sugar_renderer\\camera.cpp",
-              "RelativeToolTip": "Project0\\libraries\\include\\sugar_renderer\\camera.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAYAAAAAAAAAA==",
+              "Title": "particle.cpp",
+              "DocumentMoniker": "C:\\Dev\\C\u002B\u002B\\Project0\\Project0\\libraries\\include\\sugar_renderer\\particle.cpp",
+              "RelativeDocumentMoniker": "Project0\\libraries\\include\\sugar_renderer\\particle.cpp",
+              "ToolTip": "C:\\Dev\\C\u002B\u002B\\Project0\\Project0\\libraries\\include\\sugar_renderer\\particle.cpp",
+              "RelativeToolTip": "Project0\\libraries\\include\\sugar_renderer\\particle.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-10-05T19:13:14.752Z",
+              "WhenOpened": "2024-10-04T16:14:59.415Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "particle.h",
+              "DocumentMoniker": "C:\\Dev\\C\u002B\u002B\\Project0\\Project0\\libraries\\include\\sugar_renderer\\particle.h",
+              "RelativeDocumentMoniker": "Project0\\libraries\\include\\sugar_renderer\\particle.h",
+              "ToolTip": "C:\\Dev\\C\u002B\u002B\\Project0\\Project0\\libraries\\include\\sugar_renderer\\particle.h",
+              "RelativeToolTip": "Project0\\libraries\\include\\sugar_renderer\\particle.h",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAqwB4AAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-04T16:15:04.548Z",
               "EditorCaption": ""
             }
           ]

@@ -25,7 +25,7 @@ void Particle::Draw(Shader& s)
 
 	renderer.objectMatrix = glm::translate(renderer.objectMatrix, glm::vec3(Particle::Position, 0.0f));   //Move it to the GameObject position
 	renderer.objectMatrix = glm::scale(renderer.objectMatrix, glm::vec3(Particle::Scale, 0.0f));          //Scale the GameObject
-	renderer.transformations = renderer.projection * renderer.view * renderer.objectMatrix;
+	renderer.transformations = renderer.projection * renderer.objectMatrix;
 
 	Particle::transShaderLoc = glGetUniformLocation((*shader).ID, "transformations");
 	glUniformMatrix4fv(transShaderLoc, 1, GL_FALSE, glm::value_ptr(renderer.transformations));

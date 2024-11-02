@@ -72,9 +72,6 @@
     <ClCompile Include="libraries\include\sugar_renderer\particle.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="libraries\include\sugar_renderer\camera.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="libraries\include\sugar_renderer\VAO.h">
@@ -114,9 +111,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="libraries\include\sugar_renderer\particle.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="libraries\include\sugar_renderer\camera.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -21,39 +21,23 @@ int main()
 	// SHADERS
 	Shader circleProgram("ressources/shaders/default.vert", "ressources/shaders/circle.frag");
 
-	// CAMERA
-	Camera camera(10.0f);
-	float baseSpeed = 0.1f;
-	float zoomSpeed = 10.0f;
-	float cameraSpeed = 0.0f;
+	// TEXTURES
 
 	// GAME VARIABLES
-	int NB_PARTICLES = 500;
+	int NB_PARTICLES = 1000;
 	std::vector<Particle> particles;
 	particles.reserve(NB_PARTICLES);
 	Particle* refParticle;
 
-	srand(time(0));
+	srand(time(NULL));
 
-	//Generation
-	float PI = 3.141593f;
-	float angle = 0.0f;
-	float distance = 0.0f;
-
-	refParticle = nullptr;
 	for (unsigned int i = 0; i < NB_PARTICLES; ++i)
 	{
+		refParticle = nullptr;
 		refParticle = new Particle();
 		(*refParticle).Scale = glm::vec2(0.02f, 0.02f);
-
-		angle = (float)(rand() % 101 / 100.0f) * 2.0f * PI;
-		distance = (float)(rand() % 101 / 100.0f) * 4.0f;
-
-		float starX = cos(angle) * distance;
-		float starY = sin(angle) * distance;
-
-		(*refParticle).Position = glm::vec2(starX, starY);
-
+		(*refParticle).Position = glm::vec2(((rand() % 800 + 1) - 400.5f)/100, ((rand() % 800 + 1) - 400.5f)/100);
+		//(*refParticle).Position = glm::vec2(0.0f, 0.0f + i/1000.0f);
 		particles.push_back(*refParticle);
 	}
 
@@ -76,34 +60,6 @@ int main()
 		std::string newTitle = "Test - " + FPS + " FPS / " + ms + " ms.";
 		glfwSetWindowTitle(engine.window, newTitle.c_str());
 
-		cameraSpeed = baseSpeed * camera.GetScale();
-
-		//Inputs
-		if (Input::GetKeyDown(GLFW_KEY_A))
-		{
-			camera.SetPosition(camera.GetPosition() + glm::vec2(-1.0f, 0.0f) * cameraSpeed * (float)engine.deltaTime);
-		}
-		if (Input::GetKeyDown(GLFW_KEY_W))
-		{
-			camera.SetPosition(camera.GetPosition() + glm::vec2(0.0f, 1.0f) * cameraSpeed * (float)engine.deltaTime);
-		}
-		if (Input::GetKeyDown(GLFW_KEY_S))
-		{
-			camera.SetPosition(camera.GetPosition() + glm::vec2(0.0f, -1.0f) * cameraSpeed * (float)engine.deltaTime);
-		}
-		if (Input::GetKeyDown(GLFW_KEY_D))
-		{
-			camera.SetPosition(camera.GetPosition() + glm::vec2(1.0f, 0.0f) * cameraSpeed * (float)engine.deltaTime);
-		}
-		if (Input::GetKeyDown(GLFW_KEY_LEFT_SHIFT))
-		{
-			camera.SetScale(camera.GetScale() + zoomSpeed * engine.deltaTime);
-		}
-		if (Input::GetKeyDown(GLFW_KEY_LEFT_CONTROL))
-		{
-			camera.SetScale(camera.GetScale() - zoomSpeed * engine.deltaTime);
-		}
-
 		// GAME LOGIC
 		circleProgram.Activate();
 		vao.Bind();
@@ -116,18 +72,14 @@ int main()
 				if (j != i)
 				{
 					p2 = particles[j].Position;
+					float m2 = particles[j].Mass;
 
-					if (p1 != p2)
-					{
-						float m2 = particles[j].Mass;
+					r = p2 - p1;
+					mag_sq = r.x * r.x + r.y * r.y;
+					mag = sqrt(mag_sq);
+					a1 = (m2 / (max(mag_sq, MIN_DISTANCE * mag))) * r;
 
-						r = p2 - p1;
-						mag_sq = r.x * r.x + r.y * r.y;
-						mag = sqrt(mag_sq);
-						a1 = (m2 / (max(mag_sq, MIN_DISTANCE * mag))) * r;
-
-						(*refParticle).Acceleration += a1;
-					}
+					(*refParticle).Acceleration += a1;
 				}
 			}
 
