@@ -36,7 +36,7 @@
               "RelativeDocumentMoniker": "Project0\\src\\main.cpp",
               "ToolTip": "C:\\Dev\\C\u002B\u002B\\Project0\\Project0\\src\\main.cpp",
               "RelativeToolTip": "Project0\\src\\main.cpp",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAADIAAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAuwFMAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-10-02T20:20:40.802Z",
               "IsPinned": true,
@@ -52,8 +52,7 @@
               "RelativeToolTip": "Project0\\libraries\\include\\chocolate_engine\\engine.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-04T16:39:17.83Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-04T16:39:17.83Z"
             },
             {
               "$type": "Document",
@@ -65,8 +64,7 @@
               "RelativeToolTip": "Project0\\libraries\\include\\sugar_renderer\\particle.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-10-04T16:14:59.415Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-04T16:14:59.415Z"
             },
             {
               "$type": "Document",
@@ -78,8 +76,7 @@
               "RelativeToolTip": "Project0\\libraries\\include\\sugar_renderer\\particle.h",
               "ViewState": "AgIAAAMAAAAAAAAAAAAqwB4AAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-04T16:15:04.548Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-04T16:15:04.548Z"
             }
           ]
         }

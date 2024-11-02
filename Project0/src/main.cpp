@@ -72,14 +72,17 @@ int main()
 				if (j != i)
 				{
 					p2 = particles[j].Position;
-					float m2 = particles[j].Mass;
+					if (p1 != p2)
+					{
+						float m2 = particles[j].Mass;
 
-					r = p2 - p1;
-					mag_sq = r.x * r.x + r.y * r.y;
-					mag = sqrt(mag_sq);
-					a1 = (m2 / (max(mag_sq, MIN_DISTANCE * mag))) * r;
+						r = p2 - p1;
+						mag_sq = r.x * r.x + r.y * r.y;
+						mag = sqrt(mag_sq);
+						a1 = (m2 / (max(mag_sq, MIN_DISTANCE * mag))) * r;
 
-					(*refParticle).Acceleration += a1;
+						(*refParticle).Acceleration += a1;
+					}
 				}
 			}
 
